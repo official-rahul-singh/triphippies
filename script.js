@@ -32,3 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+// swap destinations
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the elements
+    var fltSwipCircle = document.querySelector(".fltSwipCircle");
+    var fromCityInput = document.getElementById("fromCity");
+    var toCityInput = document.getElementById("toCity");
+
+    // Add event listener to fltSwipCircle
+    fltSwipCircle.addEventListener("click", function () {
+        // Swap the values of fromCity and toCity inputs
+        var temp = fromCityInput.value;
+        fromCityInput.value = toCityInput.value;
+        toCityInput.value = temp;
+    });
+});
