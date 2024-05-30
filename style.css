@@ -1,0 +1,143 @@
+.hero {
+    height:  auto;
+    padding-bottom: 30px;
+    padding-top: clamp(5rem, 4.1071rem + 2.381vw, 6.25rem);
+}
+
+.mx-3{
+    margin-inline: 30px;
+}
+
+
+.searchWidget{
+    padding: 40px 0px 20px 0px;
+    margin-top: -22px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.searchWidget, .searchWidgetbg{
+    background-color: var(--white);
+    border-radius: 4px;
+}
+
+.searchWidgetbg{
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 10%);
+    justify-content: center;
+}
+.searchWidgetbg .trip-title{
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchWidgetbg .trip-title:first-of-type, .searchWidgetbg .search-city {
+  border-right: 1px solid #d8d8d8;
+}
+
+.searchWidgetbg .search-city:last-of-type{
+    border-right: unset;
+}
+
+.search-city label{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   cursor: pointer;
+}
+.search-city label input{
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-city label input:focus-visible{
+    outline: none;
+}
+
+.searchWidget .trip-btn{
+    justify-content: center;
+}
+
+.hero .overlay-title {
+    line-height: 54px;
+    margin-bottom: 30px;
+}
+
+.fltSwipCircle{
+    border: 2px solid rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFEFEF;
+    box-shadow: 0 0px 5px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+
+.search-city:hover{
+    background-color: #ffefef;
+}
+
+.tabcontent {
+    display: none;
+  }
+
+  .trip-title.active{
+    color: var(--primary-color);
+  }
+
+  .lbl-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap:5px;
+  }
+
+  .lbl-input::after{
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 448 512'%3E%3Cpath d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.search-city:hover .lbl-input::after{
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .hero img {
+        display: none;
+    }
+
+    .hero .overlay-title{
+        color: var(--white);
+    }
+}
+     
+@media screen and (max-width: 600px) {
+    .mb-wrap{
+        flex-wrap: wrap;
+    }
+}
+    
