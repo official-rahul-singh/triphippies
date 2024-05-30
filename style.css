@@ -171,9 +171,33 @@
     z-index: 1;
 }
 
-/* .inputcount-list button{
-    background-color: transparent;
+.inputcount-list2 button, .inputcount-list1 button{
+    background-color: var(--primary-color);
     border-radius: 50%;
-    padding:5px;
-    border: 1px solid gray;
-} */
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.inputcount-list2, .inputcount-list1 {
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+
+#apply-btn{
+    padding:6px 10px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border: none;
+    color: var(--white);
+    border-radius: 4px;
+}
+
+.number-list li{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 15px;
+}
