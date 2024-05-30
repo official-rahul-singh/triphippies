@@ -24,7 +24,6 @@
 
 .searchWidgetbg{
     position: relative;
-    z-index: 1;
     box-shadow: 0 2px 20px 0 rgb(0 0 0 / 10%);
     justify-content: center;
 }
@@ -43,6 +42,9 @@
 .searchWidgetbg .search-city:last-of-type{
     border-right: unset;
 }
+.search-city{
+    width: 100%;
+}
 
 .search-city label{
    display: flex;
@@ -50,6 +52,7 @@
    justify-content: center;
    flex-direction: column;
    cursor: pointer;
+   user-select: none;
 }
 .search-city label input{
     text-align: center;
@@ -90,6 +93,7 @@
     background-color: #FFEFEF;
     box-shadow: 0 0px 5px 0 rgb(0 0 0 / 10%);
     cursor: pointer;
+    user-select: none;
 }
 
 .search-city:hover{
@@ -141,3 +145,35 @@
     }
 }
     
+
+/* input dropdown */
+.input-dropdown{
+    position: relative;
+}
+
+.open-dropdown.show { 
+    display: flex;
+}
+
+/* Optionally, you can hide the dropdown initially */
+.open-dropdown {
+    display: none;
+    min-width: 150px;
+    background-color: var(--white);
+    position: absolute;
+    list-style: none;
+    transform: translateY(-22px);
+    padding: 15px;
+    border: 1px solid #d8d8d8;
+    white-space: nowrap;
+    flex-direction: column;
+    gap:10px;
+    z-index: 1;
+}
+
+/* .inputcount-list button{
+    background-color: transparent;
+    border-radius: 50%;
+    padding:5px;
+    border: 1px solid gray;
+} */

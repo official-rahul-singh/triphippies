@@ -48,3 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
         toCityInput.value = temp;
     });
 });
+
+
+// input field dropdown
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the elements
+    var inputDropdown = document.querySelector('.input-dropdown');
+    var dropdownList = document.querySelector('.open-dropdown');
+
+    // Add event listener to the input-dropdown label
+    inputDropdown.addEventListener("click", function () {
+        // Toggle the 'open' class on the dropdown list
+        dropdownList.classList.toggle('show');
+    });
+});
+
