@@ -63,3 +63,57 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+// number
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to handle button clicks
+    function handleButtonClick(minusBtn, plusBtn, inputNumber) {
+        // Add event listener to minus button
+        minusBtn.addEventListener("click", function () {
+            // Get the current value
+            var value = parseInt(inputNumber.textContent);
+            // Decrement value if greater than 0
+            if (value > 0) {
+                inputNumber.textContent = value - 1;
+            }
+        });
+
+        // Add event listener to plus button
+        plusBtn.addEventListener("click", function () {
+            // Get the current value
+            var value = parseInt(inputNumber.textContent);
+            // Increment value
+            inputNumber.textContent = value + 1;
+        });
+    }
+
+    // Function to update the value of #travelers-number input
+    function updateTravelersNumber() {
+        var inputNumber1Value = parseInt(document.querySelector('.inputcount-list1 .input-number').textContent);
+        var inputNumber2Value = parseInt(document.querySelector('.inputcount-list2 .input-number').textContent);
+        var totalTravelers = inputNumber1Value + inputNumber2Value;
+        document.querySelector('#travelers-number').value = totalTravelers;
+    }
+
+    // Get the elements for inputcount-list1
+    var minusBtn1 = document.querySelector('.inputcount-list1 .minus');
+    var plusBtn1 = document.querySelector('.inputcount-list1 .plus');
+    var inputNumber1 = document.querySelector('.inputcount-list1 .input-number');
+
+    // Handle button clicks for inputcount-list1
+    handleButtonClick(minusBtn1, plusBtn1, inputNumber1);
+
+    // Get the elements for inputcount-list2
+    var minusBtn2 = document.querySelector('.inputcount-list2 .minus');
+    var plusBtn2 = document.querySelector('.inputcount-list2 .plus');
+    var inputNumber2 = document.querySelector('.inputcount-list2 .input-number');
+
+    // Handle button clicks for inputcount-list2
+    handleButtonClick(minusBtn2, plusBtn2, inputNumber2);
+
+    // Add event listener to Apply button
+    document.getElementById("apply-btn").addEventListener("click", function () {
+        updateTravelersNumber();
+    });
+});
